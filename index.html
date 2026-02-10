@@ -1,0 +1,42 @@
+# Personalized Valentine Experience
+# Requested by Mr. Brefo for Ama Adoma
+
+def start_valentine_date():
+    proposer = "Mr. Brefo"
+    recipient = "Ama Adoma"
+
+    print(f"--- ❤️ A Special Message for {recipient} ❤️ ---")
+    print(f"\n{recipient}, {proposer} has a very important question for you...")
+    
+    # The Proposal Logic
+    ans = input("\nWill you be my Valentine? (Yes/No): ").strip().lower()
+
+    if ans == "yes":
+        print(f"\n🌹 Wonderful! {proposer} is smiling right now.")
+        print("He wants to know a bit more about what's on your mind...")
+        ask_romantic_questions(proposer)
+    else:
+        print(f"\n{proposer} understands, but his heart will always be open for you.")
+
+def ask_romantic_questions(name):
+    # Your specific questions integrated here
+    questions = [
+        f"1. What is your favorite thing about {name}?",
+        f"2. What is your favorite memory involving {name}?",
+        f"3. What do you love most about {name}?",
+        "4. What is your idea of a perfect date night?",
+        "5. What would you want me to get you for Valentine's Day?"
+    ]
+    
+    responses = []
+    
+    for q in questions:
+        answer = input(f"\n{q}\nAnswer: ")
+        responses.append(f"Q: {q} | A: {answer}")
+
+    print("\n--- ❤️ Summary of Your Love ❤️ ---")
+    print(f"Thank you, Ama Adoma. I've noted everything down!")
+    print(f"I can't wait to make this Valentine's Day special for you.")
+
+if __name__ == "__main__":
+    start_valentine_date()
